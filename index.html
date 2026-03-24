@@ -1,207 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ArenaStrike - Tournament App</title>
-<style>
-  /* Reset some default */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    background-color: #1a0f26;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    line-height: 1.4;
-  }
-  a {
-    color: #ff9933;
-    text-decoration: none;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #2e193f;
-    padding: 0.8rem 1rem;
-  }
-  header h1 {
-    font-size: 1.5rem;
-    color: #ff9933;
-    margin: 0;
-  }
-  header nav a {
-    margin: 0 0.5rem;
-    background-color: #3d255a;
-    padding: 0.3rem 0.7rem;
-    border-radius: 4px;
-  }
-
-  main {
-    max-width: 480px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-
-  .download-btn {
-    background: linear-gradient(90deg, #ff7f00, #ffad33);
-    border: none;
-    padding: 0.9rem 1.5rem;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border-radius: 8px;
-    width: 100%;
-    cursor: pointer;
-    margin: 1rem 0 2rem;
-    color: #3a0f00;
-    transition: background 0.3s ease;
-  }
-  .download-btn:hover {
-    background: linear-gradient(90deg, #ffad33, #ff7f00);
-  }
-
-  h2 {
-    color: #ff9933;
-    margin-bottom: 0.5rem;
-  }
-  h3 {
-    color: #ff9933;
-  }
-  section {
-    margin-bottom: 2rem;
-  }
-
-  .mode, .step, .stat, .withdrawal {
-    background-color: #2e193f;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-  .mode strong, .step strong {
-    color: #ff9933;
-    font-weight: 700;
-  }
-
-  .withdrawal {
-    display: flex;
-    justify-content: space-between;
-  }
-  .withdrawal span {
-    font-weight: 600;
-  }
-
-  img.app-screenshot {
-    display: block;
-    max-width: 100%;
-    border-radius: 20px;
-    margin: 1.5rem auto;
-    box-shadow: 0 0 20px #ff9933aa;
-  }
-
-  footer {
-    color: #666;
-    font-size: 0.8rem;
-    margin: 3rem 0 1rem;
-    text-align: center;
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>ArenaStrike - Play & Win</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <h1>ArenaStrike</h1>
-  <nav>
-    <a href="#"><!-- WhatsApp icon -->WA</a>
-    <a href="#"><!-- Other icon -->Other</a>
-    <a href="#"><!-- Menu icon -->Menu</a>
-  </nav>
-</header>
+<div class="container">
 
-<main>
-  <section id="intro">
-    <h3>DAILY TOURNAMENTS</h3>
-    <h2>Play. Win. Repeat.</h2>
-    <p>Join ArenaStrike tournaments — Low entry, Fast payouts, 100% fair play.</p>
-    <button class="download-btn" onclick="window.location.href='#'">↓ Download App</button>
-    <img src="https://i.imgur.com/FakeImage.png" alt="ArenaStrike App Screenshot" class="app-screenshot" />
-  </section>
+  <!-- HERO -->
+  <div class="hero">
+    <img src="logo.png" class="logo">
+    <h1>Play. Win. Repeat.</h1>
+    <p>Join ArenaStrike tournaments & win rewards</p>
 
-  <section id="tournament-modes">
-    <h2>Tournament Modes</h2>
-    <div class="mode">
-      <strong>Per-Kill BR</strong>
-      <p>Earn per kill. Fast-paced matches.</p>
-    </div>
-    <div class="mode">
-      <strong>BR Survival</strong>
-      <p>Top 3 share prize pool. Play smart, last long.</p>
-    </div>
-    <div class="mode">
-      <strong>1v1 Duels</strong>
-      <p>Quick matches with instant winners.</p>
-    </div>
-  </section>
+    <a href="app.apk" download>
+      <button class="btn">Download App</button>
+    </a>
+  </div>
 
-  <section id="how-it-works">
-    <h2>How it Works</h2>
-    <div class="step">
-      <strong>1 — Register</strong>
-      <p>Create account with mobile number.</p>
-    </div>
-    <div class="step">
-      <strong>2 — Join Match</strong>
-      <p>Select tournament & pay entry fee.</p>
-    </div>
-    <div class="step">
-      <strong>3 — Win & Withdraw</strong>
-      <p>Get instant rewards in wallet.</p>
-    </div>
-  </section>
+  <!-- TOURNAMENT MODES -->
+  <h2>Tournament Modes</h2>
 
-  <section id="stats">
-    <div class="stat">
-      <strong>100,000+</strong>
-      <p>Total Users</p>
-    </div>
-    <div class="stat">
-      <strong>5,390,254</strong>
-      <p>Total Matches Played</p>
-    </div>
-    <div class="stat">
-      <strong>₹7,887,330</strong>
-      <p>Total Winnings</p>
-    </div>
-  </section>
+  <div class="card">
+    <h3>Per-Kill BR</h3>
+    <p>Earn per kill. Fast-paced matches.</p>
+  </div>
 
-  <section id="recent-withdrawals">
-    <h2>Recent Withdrawals</h2>
-    <div class="withdrawal">
-      <span>chanduyt</span><span>₹300</span>
-    </div>
-    <div class="withdrawal">
-      <span>Riya</span><span>₹100</span>
-    </div>
-    <div class="withdrawal">
-      <span>ppgamer</span><span>₹200</span>
-    </div>
-    <div class="withdrawal">
-      <span>sakshamgg</span><span>₹250</span>
-    </div>
-    <div class="withdrawal">
-      <span>gamertarun</span><span>₹80</span>
-    </div>
-    <div class="withdrawal">
-      <span>gamertarun</span><span>₹500</span>
-    </div>
-  </section>
-</main>
+  <div class="card">
+    <h3>BR Survival</h3>
+    <p>Top players win prize pool.</p>
+  </div>
 
-<footer>
-  <p>© 2026 ArenaStrike — All rights reserved.</p>
-</footer>
+  <div class="card">
+    <h3>1v1 Duels</h3>
+    <p>Instant winners.</p>
+  </div>
 
+  <!-- HOW IT WORKS -->
+  <h2>How it Works</h2>
+
+  <div class="card">1 — Register</div>
+  <div class="card">2 — Join Match</div>
+  <div class="card">3 — Win & Withdraw</div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <h2 id="users">0</h2>
+    <p>Total Users</p>
+
+    <h2 id="matches">0</h2>
+    <p>Total Matches</p>
+
+    <h2 id="winnings">₹0</h2>
+    <p>Total Winnings</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
