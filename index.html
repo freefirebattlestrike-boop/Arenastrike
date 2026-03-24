@@ -13,7 +13,7 @@ body{
   color:white;
 }
 
-/* NAVBAR */
+/* NAV */
 .nav{
   display:flex;
   justify-content:space-between;
@@ -35,6 +35,141 @@ body{
   border-radius:10px;
   color:black;
   text-decoration:none;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:20px;
+}
+.hero h1{
+  color:orange;
+}
+.btn{
+  background:linear-gradient(45deg,orange,gold);
+  padding:15px;
+  border-radius:10px;
+  display:inline-block;
+  margin-top:10px;
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* SLIDER */
+.slider{
+  overflow:hidden;
+}
+.track{
+  display:flex;
+  animation:slide 10s linear infinite;
+}
+.track img{
+  width:200px;
+  margin:10px;
+  border-radius:15px;
+}
+@keyframes slide{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+
+/* CARD */
+.card{
+  background:#1a0333;
+  margin:10px;
+  padding:15px;
+  border-radius:15px;
+}
+
+/* POPUP */
+.popup{
+  position:fixed;
+  bottom:10px;
+  left:10px;
+  right:10px;
+  background:#1f1f2e;
+  padding:10px;
+  border-radius:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.popup img{
+  width:40px;
+  border-radius:10px;
+}
+.install{
+  background:green;
+  padding:10px;
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+    <b>ArenaStrike</b>
+  </div>
+  <a href="https://fs.digicroz.com/battlex-bucket/apper/arena-strike/apk-builds/arena-strike-v1.apk" class="download">Download</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h3>DAILY TOURNAMENTS</h3>
+  <h1>Play. Win. Repeat.</h1>
+  <p>Join ArenaStrike & win real rewards</p>
+  <a href="https://fs.digicroz.com/battlex-bucket/apper/arena-strike/apk-builds/arena-strike-v1.apk" class="btn">Download App</a>
+</div>
+
+<!-- SLIDER -->
+<div class="slider">
+  <div class="track">
+    <img src="https://picsum.photos/200/300?1">
+    <img src="https://picsum.photos/200/300?2">
+    <img src="https://picsum.photos/200/300?3">
+    <img src="https://picsum.photos/200/300?4">
+    <img src="https://picsum.photos/200/300?5">
+    <img src="https://picsum.photos/200/300?6">
+  </div>
+</div>
+
+<!-- WITHDRAW -->
+<div class="card">
+  <h3>💸 Live Withdraw</h3>
+  <p>Priya ₹200</p>
+  <p>Vikas ₹150</p>
+  <p>Abhishek ₹500</p>
+  <p>Rahul ₹300</p>
+</div>
+
+<!-- TOURNAMENT -->
+<div class="card">
+  <h3>🎮 Tournaments</h3>
+  <p>Solo • Duo • Squad Matches</p>
+</div>
+
+<!-- POPUP -->
+<div class="popup">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+    <div>
+      <b>ArenaStrike</b><br>
+      <small>Install App</small>
+    </div>
+  </div>
+  <a href="https://fs.digicroz.com/battlex-bucket/apper/arena-strike/apk-builds/arena-strike-v1.apk" class="install">Install</a>
+</div>
+
+</body>
+</html>  text-decoration:none;
   font-weight:bold;
 }
 
