@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0b0014;
+  color: white;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  border-radius: 20px;
+}
+
+h1 {
+  color: orange;
+}
+
+.btn {
+  background: linear-gradient(45deg, orange, gold);
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.card {
+  background: linear-gradient(145deg, #1a0b2e, #12051f);
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255,165,0,0.2);
+}
+
+.stats {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.stats h2 {
+  color: orange;
+}
