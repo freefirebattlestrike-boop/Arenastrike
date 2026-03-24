@@ -1,227 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ArenaStrike</title>
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ArenaStrike - Tournament App</title>
 <style>
-body{
-  margin:0;
-  font-family:Arial;
-  background:#0b0120;
-  color:white;
-}
+  /* Reset some default */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background-color: #1a0f26;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+  }
+  a {
+    color: #ff9933;
+    text-decoration: none;
+  }
 
-/* NAV */
-.nav{
-  display:flex;
-  justify-content:space-between;
-  padding:15px;
-  background:#14002e;
-}
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-.logo img{
-  width:40px;
-  border-radius:10px;
-}
-.download{
-  background:orange;
-  padding:10px 15px;
-  border-radius:10px;
-  color:black;
-  text-decoration:none;
-  font-weight:bold;
-}
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e193f;
+    padding: 0.8rem 1rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+    color: #ff9933;
+    margin: 0;
+  }
+  header nav a {
+    margin: 0 0.5rem;
+    background-color: #3d255a;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+  }
 
-/* HERO */
-.hero{
-  text-align:center;
-  padding:20px;
-}
-.hero h1{
-  color:orange;
-}
-.btn{
-  background:linear-gradient(45deg,orange,gold);
-  padding:15px;
-  border-radius:10px;
-  display:inline-block;
-  margin-top:10px;
-  color:black;
-  text-decoration:none;
-  font-weight:bold;
-}
+  main {
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
 
-/* SLIDER */
-.slider{
-  overflow:hidden;
-}
-.track{
-  display:flex;
-  animation:slide 12s linear infinite;
-}
-.track img{
-  width:200px;
-  margin:10px;
-  border-radius:15px;
-}
-@keyframes slide{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-50%);}
-}
+  .download-btn {
+    background: linear-gradient(90deg, #ff7f00, #ffad33);
+    border: none;
+    padding: 0.9rem 1.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    margin: 1rem 0 2rem;
+    color: #3a0f00;
+    transition: background 0.3s ease;
+  }
+  .download-btn:hover {
+    background: linear-gradient(90deg, #ffad33, #ff7f00);
+  }
 
-/* CARD */
-.card{
-  background:#1a0333;
-  margin:10px;
-  padding:15px;
-  border-radius:15px;
-}
+  h2 {
+    color: #ff9933;
+    margin-bottom: 0.5rem;
+  }
+  h3 {
+    color: #ff9933;
+  }
+  section {
+    margin-bottom: 2rem;
+  }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  padding:10px;
-}
-.grid img{
-  width:100%;
-  border-radius:10px;
-}
+  .mode, .step, .stat, .withdrawal {
+    background-color: #2e193f;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .mode strong, .step strong {
+    color: #ff9933;
+    font-weight: 700;
+  }
 
-/* WITHDRAW SCROLL */
-.withdraw{
-  height:120px;
-  overflow:hidden;
-}
-.withdraw div{
-  animation:scrollUp 8s linear infinite;
-}
-@keyframes scrollUp{
-  0%{transform:translateY(100%);}
-  100%{transform:translateY(-100%);}
-}
+  .withdrawal {
+    display: flex;
+    justify-content: space-between;
+  }
+  .withdrawal span {
+    font-weight: 600;
+  }
 
-/* POPUP */
-.popup{
-  position:fixed;
-  bottom:10px;
-  left:10px;
-  right:10px;
-  background:#1f1f2e;
-  padding:10px;
-  border-radius:15px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.popup img{
-  width:40px;
-  border-radius:10px;
-}
-.install{
-  background:green;
-  padding:10px;
-  border-radius:10px;
-  color:white;
-  text-decoration:none;
-}
+  img.app-screenshot {
+    display: block;
+    max-width: 100%;
+    border-radius: 20px;
+    margin: 1.5rem auto;
+    box-shadow: 0 0 20px #ff9933aa;
+  }
+
+  footer {
+    color: #666;
+    font-size: 0.8rem;
+    margin: 3rem 0 1rem;
+    text-align: center;
+  }
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
-<div class="nav">
-  <div class="logo">
-    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
-    <b>ArenaStrike</b>
-  </div>
-  <a href="https://fs.digicroz.com/battlex-bucket/apper/arena-strike/apk-builds/arena-strike-v1.apk" class="download">Download</a>
-</div>
+<header>
+  <h1>ArenaStrike</h1>
+  <nav>
+    <a href="#"><!-- WhatsApp icon -->WA</a>
+    <a href="#"><!-- Other icon -->Other</a>
+    <a href="#"><!-- Menu icon -->Menu</a>
+  </nav>
+</header>
 
-<!-- HERO -->
-<div class="hero">
-  <h3>DAILY TOURNAMENTS</h3>
-  <h1>Play. Win. Repeat.</h1>
-  <p>Join ArenaStrike & win real rewards</p>
-  <a href="https://fs.digicroz.com/battlex-bucket/apper/arena-strike/apk-builds/arena-strike-v1.apk" class="btn">Download App</a>
-</div>
+<main>
+  <section id="intro">
+    <h3>DAILY TOURNAMENTS</h3>
+    <h2>Play. Win. Repeat.</h2>
+    <p>Join ArenaStrike tournaments — Low entry, Fast payouts, 100% fair play.</p>
+    <button class="download-btn" onclick="window.location.href='#'">↓ Download App</button>
+    <img src="https://i.imgur.com/FakeImage.png" alt="ArenaStrike App Screenshot" class="app-screenshot" />
+  </section>
 
-<!-- SLIDER -->
-<div class="slider">
-  <div class="track">
-    <img src="https://picsum.photos/200/300?1">
-    <img src="https://picsum.photos/200/300?2">
-    <img src="https://picsum.photos/200/300?3">
-    <img src="https://picsum.photos/200/300?4">
-    <img src="https://picsum.photos/200/300?5">
-  </div>
-</div>
-
-<!-- WITHDRAW -->
-<div class="card">
-  <h3>💸 Live Withdraw</h3>
-  <div class="withdraw">
-    <div>
-      <p>Priya ₹200</p>
-      <p>Vikas ₹150</p>
-      <p>Abhishek ₹500</p>
-      <p>Rahul ₹300</p>
+  <section id="tournament-modes">
+    <h2>Tournament Modes</h2>
+    <div class="mode">
+      <strong>Per-Kill BR</strong>
+      <p>Earn per kill. Fast-paced matches.</p>
     </div>
-  </div>
-</div>
-
-<!-- TOURNAMENTS -->
-<div class="card">
-  <h3>🎮 Live Tournaments</h3>
-</div>
-
-<div class="grid">
-
-  <div class="card">
-    <img src="https://i.imgur.com/8Km9tLL.jpg">
-    <h4>🔥 BR Full Map</h4>
-    <p>Entry ₹20 • Win ₹100</p>
-  </div>
-
-  <div class="card">
-    <img src="https://i.imgur.com/2DhmtJ4.jpg">
-    <h4>⚡ Clash Squad</h4>
-    <p>Entry ₹10 • Win ₹50</p>
-  </div>
-
-  <div class="card">
-    <img src="https://i.imgur.com/qIufhof.png">
-    <h4>🎯 Lone Wolf</h4>
-    <p>Entry ₹5 • Win ₹30</p>
-  </div>
-
-  <div class="card">
-    <img src="https://i.imgur.com/Z7AzH2c.jpg">
-    <h4>👑 CS Ranked</h4>
-    <p>Entry ₹15 • Win ₹70</p>
-  </div>
-
-</div>
-
-<!-- POPUP -->
-<div class="popup">
-  <div style="display:flex;align-items:center;gap:10px;">
-    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
-    <div>
-      <b>ArenaStrike</b><br>
-      <small>Install App</small>
+    <div class="mode">
+      <strong>BR Survival</strong>
+      <p>Top 3 share prize pool. Play smart, last long.</p>
     </div>
-  </div>
-  <a href="https://fs.digicroz.com/battlex-bucket/apper/arena-strike/apk-builds/arena-strike-v1.apk" class="install">Install</a>
-</div>
+    <div class="mode">
+      <strong>1v1 Duels</strong>
+      <p>Quick matches with instant winners.</p>
+    </div>
+  </section>
+
+  <section id="how-it-works">
+    <h2>How it Works</h2>
+    <div class="step">
+      <strong>1 — Register</strong>
+      <p>Create account with mobile number.</p>
+    </div>
+    <div class="step">
+      <strong>2 — Join Match</strong>
+      <p>Select tournament & pay entry fee.</p>
+    </div>
+    <div class="step">
+      <strong>3 — Win & Withdraw</strong>
+      <p>Get instant rewards in wallet.</p>
+    </div>
+  </section>
+
+  <section id="stats">
+    <div class="stat">
+      <strong>100,000+</strong>
+      <p>Total Users</p>
+    </div>
+    <div class="stat">
+      <strong>5,390,254</strong>
+      <p>Total Matches Played</p>
+    </div>
+    <div class="stat">
+      <strong>₹7,887,330</strong>
+      <p>Total Winnings</p>
+    </div>
+  </section>
+
+  <section id="recent-withdrawals">
+    <h2>Recent Withdrawals</h2>
+    <div class="withdrawal">
+      <span>chanduyt</span><span>₹300</span>
+    </div>
+    <div class="withdrawal">
+      <span>Riya</span><span>₹100</span>
+    </div>
+    <div class="withdrawal">
+      <span>ppgamer</span><span>₹200</span>
+    </div>
+    <div class="withdrawal">
+      <span>sakshamgg</span><span>₹250</span>
+    </div>
+    <div class="withdrawal">
+      <span>gamertarun</span><span>₹80</span>
+    </div>
+    <div class="withdrawal">
+      <span>gamertarun</span><span>₹500</span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 ArenaStrike — All rights reserved.</p>
+</footer>
 
 </body>
 </html>
