@@ -63,7 +63,7 @@ body{
 }
 .track{
   display:flex;
-  animation:slide 10s linear infinite;
+  animation:slide 12s linear infinite;
 }
 .track img{
   width:200px;
@@ -81,6 +81,31 @@ body{
   margin:10px;
   padding:15px;
   border-radius:15px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  padding:10px;
+}
+.grid img{
+  width:100%;
+  border-radius:10px;
+}
+
+/* WITHDRAW SCROLL */
+.withdraw{
+  height:120px;
+  overflow:hidden;
+}
+.withdraw div{
+  animation:scrollUp 8s linear infinite;
+}
+@keyframes scrollUp{
+  0%{transform:translateY(100%);}
+  100%{transform:translateY(-100%);}
 }
 
 /* POPUP */
@@ -137,23 +162,53 @@ body{
     <img src="https://picsum.photos/200/300?3">
     <img src="https://picsum.photos/200/300?4">
     <img src="https://picsum.photos/200/300?5">
-    <img src="https://picsum.photos/200/300?6">
   </div>
 </div>
 
 <!-- WITHDRAW -->
 <div class="card">
   <h3>💸 Live Withdraw</h3>
-  <p>Priya ₹200</p>
-  <p>Vikas ₹150</p>
-  <p>Abhishek ₹500</p>
-  <p>Rahul ₹300</p>
+  <div class="withdraw">
+    <div>
+      <p>Priya ₹200</p>
+      <p>Vikas ₹150</p>
+      <p>Abhishek ₹500</p>
+      <p>Rahul ₹300</p>
+    </div>
+  </div>
 </div>
 
-<!-- TOURNAMENT -->
+<!-- TOURNAMENTS -->
 <div class="card">
-  <h3>🎮 Tournaments</h3>
-  <p>Solo • Duo • Squad Matches</p>
+  <h3>🎮 Live Tournaments</h3>
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <img src="https://i.imgur.com/8Km9tLL.jpg">
+    <h4>🔥 BR Full Map</h4>
+    <p>Entry ₹20 • Win ₹100</p>
+  </div>
+
+  <div class="card">
+    <img src="https://i.imgur.com/2DhmtJ4.jpg">
+    <h4>⚡ Clash Squad</h4>
+    <p>Entry ₹10 • Win ₹50</p>
+  </div>
+
+  <div class="card">
+    <img src="https://i.imgur.com/qIufhof.png">
+    <h4>🎯 Lone Wolf</h4>
+    <p>Entry ₹5 • Win ₹30</p>
+  </div>
+
+  <div class="card">
+    <img src="https://i.imgur.com/Z7AzH2c.jpg">
+    <h4>👑 CS Ranked</h4>
+    <p>Entry ₹15 • Win ₹70</p>
+  </div>
+
 </div>
 
 <!-- POPUP -->
