@@ -1,15 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ArenaStrike</title>
-</head>
-<body style="background:black;color:white;text-align:center;">
-<h1>ArenaStrike Website Live 🔥</h1>
-<p>App download below 👇</p>
 
-<a href="https://fs.digicroz.com/battlex-bucket/apper/arena-strike/apk-builds/arena-strike-v1.apk">
-Download App
-</a>
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0b0120;
+  color:white;
+}
+
+/* NAVBAR */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  background:#14002e;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.logo img{
+  width:40px;
+  border-radius:10px;
+}
+.download{
+  background:orange;
+  padding:10px 15px;
+  border-radius:10px;
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:20px;
+}
+.hero h1{
+  color:orange;
+}
+.btn{
+  background:linear-gradient(45deg,orange,gold);
+  padding:15px;
+  border-radius:10px;
+  display:inline-block;
+  margin-top:10px;
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* SLIDER */
+.slider{
+  overflow:hidden;
+}
+.track{
+  display:flex;
+  animation:slide 10s linear infinite;
+}
+.track img{
+  width:200px;
+  margin:10px;
+  border-radius:15px;
+}
+@keyframes slide{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+
+/* WITHDRAW */
+.withdraw{
+  height:120px;
+  overflow:hidden;
+}
+.withdraw div{
+  animation:scrollUp 8s linear infinite;
+}
+@keyframes scrollUp{
+  0%{transform:translateY(100%);}
+  100%{transform:translateY(-100%);}
+}
+
+/* CARD */
+.card{
+  background:#1a0333;
+  margin:10px;
+  padding:15px;
+  border-radius:15px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  padding:10px;
+}
+.grid img{
+  width:100%;
+  border-radius:10px;
+}
+
+/* POPUP */
+.popup{
+  position:fixed;
+  bottom:10px;
+  left:10px;
+  right:10px;
+  background:#1f1f2e;
+  padding:10px;
+  border-radius:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.popup img{
+  width:40px;
+  border-radius:10px;
+}
+.install{
+  background:green;
+  padding:10px;
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">
+    <img src="logo.png">
+    <b>ArenaStrike</b>
+  </div>
+  <a href="https://fs.digicroz.com/battlex-bucket/apper/arena-strike/apk-builds/arena-strike-v1.apk" class="download">Download</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h3>DAILY TOURNAMENTS</h3>
+  <h1>Play. Win. Repeat.</h1>
+  <p>Join ArenaStrike & win real rewards</p>
+  <a href="https://fs.digicroz.com/battlex-bucket/apper/arena-strike/apk-builds/arena-strike-v1.apk" class="btn">Download App</a>
+</div>
+
+<!-- SLIDER -->
+<div class="slider">
+  <div class="track">
+    <img src="1.jpg">
+    <img src="2.jpg">
+    <img src="3.jpg">
+    <img src="4.jpg">
+    <img src="1.jpg">
+    <img src="2.jpg">
+  </div>
+</div>
+
+<!-- WITHDRAW -->
+<div class="card">
+  <h3>💸 Live Withdraw</h3>
+  <div class="withdraw">
+    <div>
+      <p>Rohit ₹100</p>
+      <p>Priya ₹200</p>
+      <p>Vikas ₹150</p>
+      <p>Abhishek ₹500</p>
+      <p>Rahul ₹300</p>
+    </div>
+  </div>
+</div>
+
+<!-- TOURNAMENT -->
+<div class="card">
+  <h3>🎮 Tournaments</h3>
+</div>
+
+<div class="grid">
+  <img src="1.jpg">
+  <img src="2.jpg">
+  <img src="3.jpg">
+  <img src="4.jpg">
+</div>
+
+<!-- POPUP -->
+<div class="popup">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <img src="logo.png">
+    <div>
+      <b>ArenaStrike</b><br>
+      <small>Install App</small>
+    </div>
+  </div>
+  <a href="https://fs.digicroz.com/battlex-bucket/apper/arena-strike/apk-builds/arena-strike-v1.apk" class="install">Install</a>
+</div>
 
 </body>
 </html>
